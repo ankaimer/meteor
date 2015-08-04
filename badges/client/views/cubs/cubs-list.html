@@ -1,0 +1,11 @@
+<template name="cubsList">
+    <p>List of Cubs:</p>
+    <ul>
+    {{#each cubsCollection }}
+      {{> cubEditForm}}
+    {{/each}}
+  </ul>
+  <button class="ui button" type="submit">Add</button>
+  <button class="ui button" type="submit">Save</button>
+
+</template>
