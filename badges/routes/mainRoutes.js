@@ -7,9 +7,10 @@ Router.route('/', {
   }
 });
 
-// Cubs Route
-Router.route('/cubs', {
-  name: 'cubsList',
+
+// track Badges
+Router.route('/trackBadges', {
+  name: 'trackBadges',
 
   subscriptions: function() {
     // returning a subscription handle or an array of subscription handles
@@ -18,7 +19,39 @@ Router.route('/cubs', {
   },
 
   action: function () {
-    this.render('cubsList');
+    this.render('trackBadges');
+    SEO.set({ title: 'Cubs - ' + Meteor.App.NAME });
+  }
+});
+
+// setup Badges
+Router.route('/setupBadges', {
+  name: 'setupBadges',
+
+  subscriptions: function() {
+    // returning a subscription handle or an array of subscription handles
+    // adds them to the wait list.
+    return Meteor.subscribe('cubsPub');
+  },
+
+  action: function () {
+    this.render('setupBadges');
+    SEO.set({ title: 'Cubs - ' + Meteor.App.NAME });
+  }
+});
+
+// setup Cubs
+Router.route('/setupCubs', {
+  name: 'setupCubs',
+
+  subscriptions: function() {
+    // returning a subscription handle or an array of subscription handles
+    // adds them to the wait list.
+    return Meteor.subscribe('cubsPub');
+  },
+
+  action: function () {
+    this.render('setupCubs');
     SEO.set({ title: 'Cubs - ' + Meteor.App.NAME });
   }
 });
