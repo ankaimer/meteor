@@ -1,9 +1,11 @@
 // Home Route
 Router.route('/', {
   name: 'home',
-  action: function () {
+  action: function() {
     this.render('home');
-    SEO.set({ title: 'Home - ' + Meteor.App.NAME });
+    SEO.set({
+      title: 'Home - ' + Meteor.App.NAME
+    });
   }
 });
 
@@ -18,9 +20,11 @@ Router.route('/trackBadges', {
     return Meteor.subscribe('cubsPub');
   },
 
-  action: function () {
+  action: function() {
     this.render('trackBadges');
-    SEO.set({ title: 'Cubs - ' + Meteor.App.NAME });
+    SEO.set({
+      title: 'Cubs - ' + Meteor.App.NAME
+    });
   }
 });
 
@@ -34,9 +38,11 @@ Router.route('/setupBadges', {
     return Meteor.subscribe('cubsPub');
   },
 
-  action: function () {
+  action: function() {
     this.render('setupBadges');
-    SEO.set({ title: 'Cubs - ' + Meteor.App.NAME });
+    SEO.set({
+      title: 'Cubs - ' + Meteor.App.NAME
+    });
   }
 });
 
@@ -50,8 +56,10 @@ Router.route('/setupCubs', {
     return Meteor.subscribe('cubsPub');
   },
 
-  action: function () {
+  action: function() {
     this.render('setupCubs');
-    SEO.set({ title: 'Cubs - ' + Meteor.App.NAME });
+    SEO.set({
+      title: 'Cubs - ' + Meteor.App.NAME
+    });
   }
 });

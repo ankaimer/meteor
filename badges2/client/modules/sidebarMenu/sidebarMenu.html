@@ -1,0 +1,26 @@
+<template name="sidebarMenu">
+  <div class="context example">
+
+    {{> topMenu}}
+
+    <div class="ui bottom attached segment pushable" id="bottomSegment">
+      <div style="" class="ui inverted labeled icon top inline horizontal sidebar menu">
+        <a class="item" href="{{pathFor route='home'}}">
+          <i class="home icon"></i> Home
+        </a>
+        <a class="item" href="{{pathFor route='trackBadges'}}">
+          <i class="grid layout icon"></i> Track Badges
+        </a>
+        <a class="item" href="{{pathFor route='setupCubs'}}">
+          <i class="wrench icon"></i>Set up Cubs
+        </a>
+        <a class="item" href="{{pathFor route='setupBadges'}}">
+          <i class="wrench icon"></i> Set up Badges
+        </a>
+      </div>
+      <div class="pusher">
+          {{>yield}}
+      </div>
+    </div>
+  </div>
+</template>
