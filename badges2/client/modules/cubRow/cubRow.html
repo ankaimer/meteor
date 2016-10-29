@@ -1,0 +1,14 @@
+<template name="cubRow">
+  {{> autoformModals}}
+  <div class="ui grid">
+    <div class="four wide column">{{name}}</div>
+    <div class="four wide column">{{dob}}</div>
+    <div class="four wide column">this._id</div>
+    <div class="four wide column">
+      {{#afModal class="btn btn-primary" collection="cubs" operation="update" doc=_id}}
+        Update Cub
+      {{/afModal}}
+      <div class="ui button">test</div>
+    </div>
+  </div>
+</template>

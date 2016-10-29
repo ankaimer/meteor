@@ -1,8 +1,13 @@
 <template name="setupCubs">
   <h1 class="ui header">Set up Cubs</h1>
-  <p>1</p>
-  <p>2</p>
-  <p>3</p>
-  <p>4</p>
-  <p>5</p>
+  {{>autoformModals}}
+   {{#afModal class="btn btn-primary" collection="cubs" operation="insert"}}
+       Add a new cub
+   {{/afModal}}
+  {{> quickForm collection="cubs" id="insertCubForm" type="insert"}}
+  <ul>
+    {{#each cubs}}
+      {{> cubRow}}
+    {{/each}}
+  </ul>
 </template>
